@@ -16,9 +16,14 @@ public class TPCommand extends CCCommand {
 		if(isPlayer(sender)) {
 			Player p = getPlayer(sender);
 			if(p.isOp()) {
-				Player p2 = Bukkit.getPlayer(args[0]);
-				p.teleport(p2.getLocation());
-				sender.sendMessage(ChatColor.RED+"You have been teleported to"+p2.getName()+".");
+				if(Bukkit.getPlayer(args[0]) == null) {
+					sender.sendMessage(getPlayerNotFoundSentence(args[0]));
+				}
+				else {
+					Player p2 = Bukkit.getPlayer(args[0]);
+					p.teleport(p2.getLocation());
+					sender.sendMessage(ChatColor.RED+"You have been teleported to "+p2.getName()+".");
+				}
 			}
 			else {
 				sender.sendMessage(noPermission);

@@ -28,13 +28,15 @@ public class Main extends JavaPlugin {
 		
 		if(cmd.getName().equalsIgnoreCase("spawn"))
 			new SpawnCommand(sender);
-		if(cmd.getName().equalsIgnoreCase("list"))
+		else if(cmd.getName().equalsIgnoreCase("list"))
 			new ListCommand(sender);
-		if(cmd.getName().equalsIgnoreCase("tp"))
+		else if(cmd.getName().equalsIgnoreCase("tp"))
 			new TPCommand(sender, args);
-		if(cmd.getName().equalsIgnoreCase("kill"))
+		else if(cmd.getName().equalsIgnoreCase("kill"))
 			new KillCommand(sender, args);
-		return false;
+		else {
+			return false;
+		}
 	}
 	
 }
