@@ -25,7 +25,6 @@ public class Main extends JavaPlugin {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		
 		// Commands
-		
 		if(cmd.getName().equalsIgnoreCase("spawn"))
 			new SpawnCommand(sender);
 		else if(cmd.getName().equalsIgnoreCase("list"))
@@ -37,6 +36,7 @@ public class Main extends JavaPlugin {
 		else {
 			return false;
 		}
+		return true;
 	}
 	
 }
