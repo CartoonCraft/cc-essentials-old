@@ -11,3 +11,6 @@ commands:
 	tp:
 		description: Teleports you to another player.
 		usage: /tp <player>
+	kill:
+		description: Kill yourself or a player
+		usage: /kill [player]
