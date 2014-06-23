@@ -27,7 +27,7 @@ public class KillCommand extends CCCommand {
 		else if(args.length == 0) {
 			if(isPlayer(sender)) {
 				sender.sendMessage(ChatColor.RED+"Goodbye, good world...");
-				Bukkit.broadcastMessage(""+ChatColor.GRAY+ChatColor.BOLD+getPlayer(sender).getCustomName()+" chose the way of suicide... Rest in peace!");
+				Bukkit.broadcastMessage(""+ChatColor.GRAY+ChatColor.BOLD+getPlayer(sender).getName()+" chose the way of suicide... Rest in peace!");
 				getPlayer(sender).setHealth(0);
 			}
 			else {

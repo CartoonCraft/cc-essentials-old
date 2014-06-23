@@ -5,6 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import fr.cartooncraft.essentials.commands.BroadcastCommand;
 import fr.cartooncraft.essentials.commands.KillCommand;
 import fr.cartooncraft.essentials.commands.ListCommand;
 import fr.cartooncraft.essentials.commands.SpawnCommand;
@@ -33,6 +34,8 @@ public class Main extends JavaPlugin {
 			new TPCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("kill"))
 			new KillCommand(sender, args);
+		else if(cmd.getName().equalsIgnoreCase("broadcast"))
+			new BroadcastCommand(sender, args);
 		else {
 			return false;
 		}
