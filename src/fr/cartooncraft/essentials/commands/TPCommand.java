@@ -20,6 +20,9 @@ public class TPCommand extends CCCommand {
 				p.teleport(p2.getLocation());
 				sender.sendMessage(ChatColor.RED+"You have been teleported to"+p2.getName()+".");
 			}
+			else {
+				sender.sendMessage(noPermission);
+			}
 		}
 		else {
 			sender.sendMessage(senderConsole);
