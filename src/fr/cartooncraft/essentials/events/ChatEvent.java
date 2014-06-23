@@ -24,7 +24,7 @@ public class ChatEvent implements Listener {
 			Bukkit.broadcastMessage(ChatColor.RESET+"<"+ChatColor.RED+p.getCustomName()+ChatColor.RESET+"> "+ev.getMessage());
 		}
 		else {
-			Bukkit.broadcastMessage(ChatColor.RESET+"<"+p.getCustomName()+"> "+ev.getMessage());
+			Bukkit.broadcastMessage(ChatColor.RESET+"<"+p.getName()+"> "+ev.getMessage());
 		}
 	}
 	
