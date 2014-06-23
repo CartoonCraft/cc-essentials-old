@@ -44,7 +44,7 @@ public class TPCommand extends CCCommand {
 				}
 				else {
 					p1 = Bukkit.getPlayer(args[0]);
-					p2 = Bukkit.getPlayer(args[0]);
+					p2 = Bukkit.getPlayer(args[1]);
 					p1.teleport(p2);
 					sender.sendMessage(getPlayerName(p1)+ChatColor.GRAY+" has been teleported to "+getPlayerName(p2)+ChatColor.GRAY+".");
 				}
@@ -61,6 +61,8 @@ public class TPCommand extends CCCommand {
 					float y = Float.parseFloat(args[1]);
 					float z = Float.parseFloat(args[2]);
 					Location l = new Location(p.getWorld(), x, y, z);
+					l.setPitch(p.getLocation().getPitch());
+					l.setYaw(p.getLocation().getYaw());
 					p.teleport(l);
 					sender.sendMessage(ChatColor.GRAY+"You have been teleported to "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
 				}
@@ -77,9 +79,11 @@ public class TPCommand extends CCCommand {
 				Player p = getPlayer(sender);
 				if(p.isOp()) {
 					float x = Float.parseFloat(args[1]);
-					float y = Float.parseFloat(args[3]);
+					float y = Float.parseFloat(args[2]);
 					float z = Float.parseFloat(args[3]);
 					Location l = new Location(p.getWorld(), x, y, z);
+					l.setPitch(p.getLocation().getPitch());
+					l.setYaw(p.getLocation().getYaw());
 					p.teleport(l);
 					sender.sendMessage(ChatColor.GRAY+getPlayerName(p)+ChatColor.GRAY+" have been teleported to "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
 				}
