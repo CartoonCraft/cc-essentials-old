@@ -2,15 +2,15 @@ name: CC-Essentials
 main: fr.cartooncraft.essentials.Main
 version: 0.1
 commands:
-	list:
-		description: Return players list.
-		usage: /list
-	spawn:
-		description: Teleport you to spawn. 
-		usage: /spawn
-	tp:
-		description: Teleports you to another player.
-		usage: /tp <player>
-	kill:
-		description: Kill yourself or a player
-		usage: /kill [player]
+    list:
+        description: Return players list.
+        usage: /list
+    spawn:
+        description: Teleport you to spawn. 
+        usage: /spawn
+    tp:
+        description: Teleports you to another player.
+        usage: /tp <player>
+    kill:
+        description: Kill yourself or a player
+        usage: /kill [player]
