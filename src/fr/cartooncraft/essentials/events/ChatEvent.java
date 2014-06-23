@@ -8,7 +8,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.Plugin;
 
-public class ChatEvent implements Listener {
+import fr.cartooncraft.essentials.CCCommand;
+
+public class ChatEvent extends CCCommand implements Listener {
 
 	Plugin p = null;
 	
@@ -20,12 +22,7 @@ public class ChatEvent implements Listener {
 	public void onChat(AsyncPlayerChatEvent ev) {
 		ev.setCancelled(true);
 		Player p = ev.getPlayer();
-		if(p.isOp()) {
-			Bukkit.broadcastMessage(ChatColor.RESET+"<"+ChatColor.RED+p.getName()+ChatColor.RESET+"> "+ev.getMessage());
-		}
-		else {
-			Bukkit.broadcastMessage(ChatColor.RESET+"<"+p.getName()+"> "+ev.getMessage());
-		}
+		Bukkit.broadcastMessage(ChatColor.RESET+"<"+getPlayerName(p)+"> "+ev.getMessage());
 	}
 	
 

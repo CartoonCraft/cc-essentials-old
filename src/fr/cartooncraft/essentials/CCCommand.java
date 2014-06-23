@@ -26,4 +26,12 @@ public class CCCommand {
 	public String getPlayerNotFoundSentence(String name) {
 		return ChatColor.RED+"Can't find "+name+". Is him offline?";
 	}
+	
+	public String getPlayerName(Player p) {
+		String name = "";
+		if(p.isOp())
+			name += ChatColor.RED;
+		name += p.getName();
+		return name;
+	}
 }

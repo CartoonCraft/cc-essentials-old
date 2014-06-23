@@ -9,8 +9,8 @@ commands:
         description: Teleport you to spawn. 
         usage: /spawn
     tp:
-        description: Teleports you to another player.
-        usage: /tp <player>
+        description: Teleports you to another player, or teleport a player to another.
+        usage: /tp <player> [player2]
     kill:
         description: Kill yourself or a player
         usage: /kill [player]
