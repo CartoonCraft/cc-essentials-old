@@ -16,6 +16,9 @@ public class SpawnCommand extends CCCommand {
 			else
 				p.sendMessage(noPermission);
 		}
+		else {
+			sender.sendMessage(senderConsole);
+		}
 	}
 	
 }

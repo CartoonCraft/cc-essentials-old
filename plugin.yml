@@ -8,3 +8,6 @@ commands:
 	spawn:
 		description: Teleport you to spawn. 
 		usage: /spawn
+	tp:
+		description: Teleports you to another player.
+		usage: /tp <player>

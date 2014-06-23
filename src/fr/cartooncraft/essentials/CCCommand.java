@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 public class CCCommand {
 
 	public String noPermission = ChatColor.RED+"Sorry, you're not authorized to do this.";
+	public String senderConsole = ChatColor.RED+"Sorry, you're a console, you can't do this!";
 	
 	public boolean isPlayer(CommandSender sender) {
 		if(sender instanceof Player)

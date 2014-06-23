@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.cartooncraft.essentials.commands.ListCommand;
 import fr.cartooncraft.essentials.commands.SpawnCommand;
+import fr.cartooncraft.essentials.commands.TPCommand;
 
 public class Main extends JavaPlugin {
 
@@ -25,6 +26,8 @@ public class Main extends JavaPlugin {
 			new SpawnCommand(sender);
 		if(cmd.getName().equalsIgnoreCase("list"))
 			new ListCommand(sender);
+		if(cmd.getName().equalsIgnoreCase("tp"))
+			new TPCommand(sender, args);
 		return false;
 	}
 }
