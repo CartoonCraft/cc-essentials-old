@@ -2,6 +2,7 @@ package fr.cartooncraft.essentials.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -20,7 +21,7 @@ public class TPCommand extends CCCommand {
 					else {
 						Player p2 = Bukkit.getPlayer(args[0]);
 						p.teleport(p2.getLocation());
-						sender.sendMessage(ChatColor.RED+"You have been teleported to "+getPlayerName(p2)+".");
+						sender.sendMessage(ChatColor.GRAY+"You have been teleported to "+getPlayerName(p2)+ChatColor.GRAY+".");
 					}
 				}
 				else {
@@ -31,7 +32,7 @@ public class TPCommand extends CCCommand {
 				sender.sendMessage(senderConsole);
 			}
 		}
-		if(args.length == 2) {
+		else if(args.length == 2) {
 			if(sender.isOp()) {
 				Player p1 = null;
 				Player p2 = null;
@@ -45,11 +46,49 @@ public class TPCommand extends CCCommand {
 					p1 = Bukkit.getPlayer(args[0]);
 					p2 = Bukkit.getPlayer(args[0]);
 					p1.teleport(p2);
-					sender.sendMessage(getPlayerName(p1)+ChatColor.RESET+" has been teleported to "+getPlayerName(p2));
+					sender.sendMessage(getPlayerName(p1)+ChatColor.GRAY+" has been teleported to "+getPlayerName(p2)+ChatColor.GRAY+".");
 				}
 			}
 			else {
 				sender.sendMessage(noPermission);
+			}
+		}
+		else if(args.length == 3) {
+			if(isPlayer(sender)) {
+				Player p = getPlayer(sender);
+				if(p.isOp()) {
+					float x = Float.parseFloat(args[0]);
+					float y = Float.parseFloat(args[1]);
+					float z = Float.parseFloat(args[2]);
+					Location l = new Location(p.getWorld(), x, y, z);
+					p.teleport(l);
+					sender.sendMessage(ChatColor.GRAY+"You have been teleported to "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
+				}
+				else {
+					sender.sendMessage(noPermission);
+				}
+			}
+			else {
+				sender.sendMessage(senderConsole);
+			}
+		}
+		else if(args.length == 4) {
+			if(Bukkit.getPlayer(args[0]) != null) {
+				Player p = getPlayer(sender);
+				if(p.isOp()) {
+					float x = Float.parseFloat(args[1]);
+					float y = Float.parseFloat(args[3]);
+					float z = Float.parseFloat(args[3]);
+					Location l = new Location(p.getWorld(), x, y, z);
+					p.teleport(l);
+					sender.sendMessage(ChatColor.GRAY+getPlayerName(p)+ChatColor.GRAY+" have been teleported to "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
+				}
+				else {
+					sender.sendMessage(noPermission);
+				}
+			}
+			else {
+				sender.sendMessage(getPlayerNotFoundSentence(args[0]));
 			}
 		}
 		else {

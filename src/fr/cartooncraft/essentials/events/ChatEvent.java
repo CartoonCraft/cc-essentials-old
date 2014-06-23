@@ -22,7 +22,7 @@ public class ChatEvent extends CCCommand implements Listener {
 	public void onChat(AsyncPlayerChatEvent ev) {
 		ev.setCancelled(true);
 		Player p = ev.getPlayer();
-		Bukkit.broadcastMessage(ChatColor.RESET+"<"+getPlayerName(p)+"> "+ev.getMessage());
+		Bukkit.broadcastMessage(ChatColor.GRAY+"<"+getPlayerName(p)+ChatColor.RESET+ChatColor.GRAY+"> "+ev.getMessage());
 	}
 	
 

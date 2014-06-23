@@ -14,3 +14,6 @@ commands:
     kill:
         description: Kill yourself or a player
         usage: /kill [player]
+    broadcast:
+        description: ...
+        usage: /broadcast <msg>
