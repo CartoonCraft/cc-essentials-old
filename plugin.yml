@@ -1,0 +1,10 @@
+name: CC-Essentials
+main: fr.cartooncraft.essentials.Main
+version: 0.1
+commands:
+	list:
+		description: Return players list.
+		usage: /list
+	spawn:
+		description: Teleport you to spawn. 
+		usage: /spawn
