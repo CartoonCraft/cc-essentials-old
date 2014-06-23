@@ -1,5 +1,6 @@
 package fr.cartooncraft.essentials;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -8,10 +9,12 @@ import fr.cartooncraft.essentials.commands.KillCommand;
 import fr.cartooncraft.essentials.commands.ListCommand;
 import fr.cartooncraft.essentials.commands.SpawnCommand;
 import fr.cartooncraft.essentials.commands.TPCommand;
+import fr.cartooncraft.essentials.events.ChatEvent;
 
 public class Main extends JavaPlugin {
 
 	public void onEnable() {
+		Bukkit.getPluginManager().registerEvents(new ChatEvent(this), this);
 		getLogger().info("CC-Essentials is loaded.");
 	}
 	
@@ -33,4 +36,5 @@ public class Main extends JavaPlugin {
 			new KillCommand(sender, args);
 		return false;
 	}
+	
 }
