@@ -17,3 +17,24 @@ commands:
     broadcast:
         description: ...
         usage: /broadcast <msg>
+    tell:
+        description: Send a message to another guy.
+        usage: /tell <player> <msg>
+    whisp:
+        description: Send a message to another guy.
+        usage: /whisp <player> <msg>
+    whisper:
+        description: Send a message to another guy.
+        usage: /whisper <player> <msg>
+    t:
+        description: Send a message to another guy.
+        usage: /t <player> <msg>
+    w:
+        description: Send a message to another guy.
+        usage: /w <player> <msg>
+    pm:
+        description: Send a message to another guy.
+        usage: /pm <player> <msg>
+    mp:
+        description: Send a message to another guy.
+        usage: /mp <player> <msg>

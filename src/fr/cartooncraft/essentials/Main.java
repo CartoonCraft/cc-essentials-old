@@ -10,6 +10,7 @@ import fr.cartooncraft.essentials.commands.KillCommand;
 import fr.cartooncraft.essentials.commands.ListCommand;
 import fr.cartooncraft.essentials.commands.SpawnCommand;
 import fr.cartooncraft.essentials.commands.TPCommand;
+import fr.cartooncraft.essentials.commands.TellCommand;
 import fr.cartooncraft.essentials.events.ChatEvent;
 
 public class Main extends JavaPlugin {
@@ -36,6 +37,8 @@ public class Main extends JavaPlugin {
 			new KillCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("broadcast"))
 			new BroadcastCommand(sender, args);
+		else if(cmd.getName().equalsIgnoreCase("tell") || cmd.getName().equalsIgnoreCase("whisp") || cmd.getName().equalsIgnoreCase("t") || cmd.getName().equalsIgnoreCase("w") || cmd.getName().equalsIgnoreCase("pm") || cmd.getName().equalsIgnoreCase("mp"))
+			new TellCommand(sender, args);
 		else {
 			return false;
 		}
