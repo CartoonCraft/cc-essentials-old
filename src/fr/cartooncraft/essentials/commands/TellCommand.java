@@ -51,10 +51,10 @@ public class TellCommand extends CCCommand {
 		String m;
 		if(sender instanceof Player) {
 			Player p1 = (Player)sender;
-			m = ChatColor.BOLD+"["+ChatColor.GRAY+getPlayerName(p1)+ChatColor.BOLD+"->"+ChatColor.GRAY+getPlayerName(p2)+ChatColor.BOLD+"] "+ChatColor.RESET+message;
+			m = ChatColor.GOLD+"["+ChatColor.GRAY+getPlayerName(p1)+ChatColor.GOLD+"->"+ChatColor.GRAY+getPlayerName(p2)+ChatColor.GOLD+"] "+ChatColor.RESET+message;
 		}
 		else {
-			m = ChatColor.BOLD+"["+ChatColor.RED+"CONSOLE"+ChatColor.BOLD+"->"+ChatColor.GRAY+getPlayerName(p2)+ChatColor.BOLD+"] "+ChatColor.RESET+message;
+			m = ChatColor.GOLD+"["+ChatColor.RED+"CONSOLE"+ChatColor.GOLD+"->"+ChatColor.GRAY+getPlayerName(p2)+ChatColor.GOLD+"] "+ChatColor.RESET+message;
 		}
 		sender.sendMessage(m);
 		p2.sendMessage(m);
