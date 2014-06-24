@@ -52,12 +52,13 @@ public class TellCommand extends CCCommand {
 		if(sender instanceof Player) {
 			Player p1 = (Player)sender;
 			m = ChatColor.GOLD+"["+ChatColor.GRAY+getPlayerName(p1)+ChatColor.GOLD+"->"+ChatColor.GRAY+getPlayerName(p2)+ChatColor.GOLD+"] "+ChatColor.RESET+message;
+			Bukkit.getConsoleSender().sendMessage(m);
 		}
 		else {
 			m = ChatColor.GOLD+"["+ChatColor.RED+"CONSOLE"+ChatColor.GOLD+"->"+ChatColor.GRAY+getPlayerName(p2)+ChatColor.GOLD+"] "+ChatColor.RESET+message;
 		}
-		sender.sendMessage(m);
 		p2.sendMessage(m);
+		sender.sendMessage(m);
 	}
 
 }
