@@ -40,7 +40,7 @@ public class Main extends JavaPlugin {
 			new BroadcastCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("kick"))
 			new KickCommand(sender, args);
-		else if(cmd.getName().equalsIgnoreCase("tell") || cmd.getName().equalsIgnoreCase("whisp") || cmd.getName().equalsIgnoreCase("t") || cmd.getName().equalsIgnoreCase("w") || cmd.getName().equalsIgnoreCase("pm") || cmd.getName().equalsIgnoreCase("mp"))
+		else if(cmd.getName().equalsIgnoreCase("tell") || cmd.getName().equalsIgnoreCase("msg") || cmd.getName().equalsIgnoreCase("whisp") || cmd.getName().equalsIgnoreCase("t") || cmd.getName().equalsIgnoreCase("w") || cmd.getName().equalsIgnoreCase("pm") || cmd.getName().equalsIgnoreCase("mp"))
 			new TellCommand(sender, args);
 		else {
 			return false;

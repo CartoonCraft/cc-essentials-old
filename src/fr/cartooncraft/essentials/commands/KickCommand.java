@@ -47,10 +47,10 @@ public class KickCommand extends CCCommand {
 						messageChat += ChatColor.RED+"CONSOLE";
 					}
 					if(messageEmpty) {
-						messageChat += ChatColor.RESET+".";
+						messageChat += ChatColor.GRAY+".";
 					}
 					else {
-						messageChat += ChatColor.RESET+" pour la raison suivante : \""+ChatColor.RESET+message+"\".";
+						messageChat += ChatColor.GRAY+" pour la raison suivante : \""+ChatColor.RESET+message+ChatColor.GRAY+"\".";
 					}
 					Bukkit.broadcastMessage(messageChat);
 				}

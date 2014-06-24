@@ -38,6 +38,9 @@ commands:
     mp:
         description: Send a message to another guy.
         usage: /mp <player> <msg>
+    msg:
+        description: Send a message to another guy.
+        usage: /msg <player> <msg>
     kick:
         description: Kick a player with reason.
         usage: /kick <player> [reason]
