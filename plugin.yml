@@ -10,7 +10,7 @@ commands:
         usage: /spawn
     tp:
         description: Teleports you to another player, or teleport a player to another.
-        usage: /tp <player> [player2]
+        usage: /tp <player> | /tp <player1> <player2> | /tp <x> <y> <z> | /tp <player> <x> <y> <z>
     kill:
         description: Kill yourself or a player
         usage: /kill [player]
@@ -38,3 +38,6 @@ commands:
     mp:
         description: Send a message to another guy.
         usage: /mp <player> <msg>
+    kick:
+        description: Kick a player with reason.
+        usage: /kick <player> [reason]
