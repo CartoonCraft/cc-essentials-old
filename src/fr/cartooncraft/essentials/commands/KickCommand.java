@@ -33,7 +33,23 @@ public class KickCommand extends CCCommand {
 					}
 					if(message.isEmpty())
 						message = "Kicked by "+sender.getName();
+					Bukkit.getLogger().info(ChatColor.GOLD+sender.getName()+" has kicked "+p.getName()+".");
 					p.kickPlayer(message);
+					String messageChat = getPlayerName(p)+ChatColor.GRAY+" a été kické par ";
+					if(sender instanceof Player) {
+						Player p2 = (Player)sender;
+						messageChat += getPlayerName(p2);
+					}
+					else {
+						messageChat += ChatColor.RED+"CONSOLE";
+					}
+					if(message.isEmpty()) {
+						messageChat += ChatColor.RESET+".";
+					}
+					else {
+						messageChat += ChatColor.RESET+" pour la raison suivante : \""+ChatColor.RESET+message+"\".";
+					}
+					Bukkit.broadcastMessage(messageChat);
 				}
 			}
 			else {
