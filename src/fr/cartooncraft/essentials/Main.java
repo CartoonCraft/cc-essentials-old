@@ -13,11 +13,13 @@ import fr.cartooncraft.essentials.commands.SpawnCommand;
 import fr.cartooncraft.essentials.commands.TPCommand;
 import fr.cartooncraft.essentials.commands.TellCommand;
 import fr.cartooncraft.essentials.events.ChatEvent;
+import fr.cartooncraft.essentials.events.CraftEvent;
 
 public class Main extends JavaPlugin {
 
 	public void onEnable() {
 		Bukkit.getPluginManager().registerEvents(new ChatEvent(this), this);
+		Bukkit.getPluginManager().registerEvents(new CraftEvent(this), this);
 		getLogger().info("CC-Essentials is loaded.");
 	}
 	
