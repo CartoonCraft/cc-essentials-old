@@ -21,9 +21,9 @@ public class CraftEvent implements Listener {
 	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onCraft(CraftItemEvent e) {
-		Material juicer = Material.getMaterial(3911);
+		Material juicer = Material.getMaterial(4167);
 		Material craftedType = e.getInventory().getResult().getType();
-		if(craftedType == Material.getMaterial(3900) || craftedType == Material.getMaterial(3901) || craftedType == Material.getMaterial(3902) || craftedType == Material.getMaterial(3903) || craftedType == Material.getMaterial(3904) || craftedType == Material.getMaterial(3905) || craftedType == Material.getMaterial(3906) || craftedType == Material.getMaterial(3907) || craftedType == Material.getMaterial(3908) || craftedType == Material.getMaterial(3909)) {
+		if(craftedType == Material.getMaterial(4156) || craftedType == Material.getMaterial(4157) || craftedType == Material.getMaterial(4158) || craftedType == Material.getMaterial(4159) || craftedType == Material.getMaterial(4160) || craftedType == Material.getMaterial(4161) || craftedType == Material.getMaterial(4162) || craftedType == Material.getMaterial(4163) || craftedType == Material.getMaterial(4164) || craftedType == Material.getMaterial(4165)) {
 			HumanEntity guyWhoClicked = e.getWhoClicked();
 			ItemStack juicerIS = new ItemStack(juicer, 1);
 			if(guyWhoClicked.getInventory().firstEmpty() == -1) {
