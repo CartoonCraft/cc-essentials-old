@@ -6,17 +6,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.plugin.Plugin;
 
 import fr.cartooncraft.essentials.CCCommand;
 
 public class ChatEvent extends CCCommand implements Listener {
-
-	Plugin p = null;
-	
-	public ChatEvent(Plugin a) {
-		this.p = a;
-	}
 	
 	@EventHandler
 	public void onChat(AsyncPlayerChatEvent ev) {

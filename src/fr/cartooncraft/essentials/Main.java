@@ -18,8 +18,8 @@ import fr.cartooncraft.essentials.events.CraftEvent;
 public class Main extends JavaPlugin {
 
 	public void onEnable() {
-		Bukkit.getPluginManager().registerEvents(new ChatEvent(this), this);
-		Bukkit.getPluginManager().registerEvents(new CraftEvent(this), this);
+		Bukkit.getPluginManager().registerEvents(new ChatEvent(), this);
+		Bukkit.getPluginManager().registerEvents(new CraftEvent(), this);
 		getLogger().info("CC-Essentials is loaded.");
 	}
 	
