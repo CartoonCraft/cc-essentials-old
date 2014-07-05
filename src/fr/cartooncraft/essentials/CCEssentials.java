@@ -14,7 +14,7 @@ import fr.cartooncraft.essentials.commands.TPCommand;
 import fr.cartooncraft.essentials.commands.TellCommand;
 import fr.cartooncraft.essentials.events.ChatEvent;
 
-public class Main extends JavaPlugin {
+public class CCEssentials extends JavaPlugin {
 
 	public void onEnable() {
 		Bukkit.getPluginManager().registerEvents(new ChatEvent(), this);

@@ -1,5 +1,5 @@
 name: CC-Essentials
-main: fr.cartooncraft.essentials.Main
+main: fr.cartooncraft.essentials.CCEssentials
 version: 0.1
 commands:
     list:
