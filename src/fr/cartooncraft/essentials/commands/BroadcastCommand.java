@@ -23,6 +23,9 @@ public class BroadcastCommand extends CCCommand {
 			
 			Bukkit.broadcastMessage(message);
 		}
+		else {
+			sender.sendMessage(noPermission);
+		}
 	}
 
 }
