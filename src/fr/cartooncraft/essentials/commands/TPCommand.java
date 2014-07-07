@@ -64,7 +64,7 @@ public class TPCommand extends CCCommand {
 					l.setPitch(p.getLocation().getPitch());
 					l.setYaw(p.getLocation().getYaw());
 					p.teleport(l);
-					sender.sendMessage(ChatColor.GRAY+"You have been teleported to "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
+					sender.sendMessage(ChatColor.GRAY+"You have been teleported to "+ChatColor.RED+"World: "+p.getWorld().getName()+ChatColor.GRAY+", "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
 				}
 				else {
 					sender.sendMessage(noPermission);
@@ -85,7 +85,7 @@ public class TPCommand extends CCCommand {
 					l.setPitch(p.getLocation().getPitch());
 					l.setYaw(p.getLocation().getYaw());
 					p.teleport(l);
-					sender.sendMessage(ChatColor.GRAY+getPlayerName(p)+ChatColor.GRAY+" have been teleported to "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
+					sender.sendMessage(ChatColor.GRAY+getPlayerName(p)+ChatColor.GRAY+" have been teleported to "+ChatColor.RED+"World: "+p.getWorld().getName()+ChatColor.GRAY+", "+ChatColor.RED+"X: "+x+ChatColor.GRAY+", "+ChatColor.RED+"Y: "+y+ChatColor.GRAY+", "+ChatColor.RED+"Z: "+z+ChatColor.GRAY+".");
 				}
 				else {
 					sender.sendMessage(noPermission);
