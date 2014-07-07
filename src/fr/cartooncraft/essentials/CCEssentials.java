@@ -14,6 +14,7 @@ import fr.cartooncraft.essentials.commands.KickallOPCommand;
 import fr.cartooncraft.essentials.commands.KillCommand;
 import fr.cartooncraft.essentials.commands.ListCommand;
 import fr.cartooncraft.essentials.commands.SpawnCommand;
+import fr.cartooncraft.essentials.commands.TPAllCommand;
 import fr.cartooncraft.essentials.commands.TPCommand;
 import fr.cartooncraft.essentials.commands.TellCommand;
 import fr.cartooncraft.essentials.events.ChatEvent;
@@ -36,7 +37,7 @@ public class CCEssentials extends JavaPlugin {
 			new SpawnCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("list"))
 			new ListCommand(sender);
-		else if(cmd.getName().equalsIgnoreCase("tp"))
+		else if(cmd.getName().equalsIgnoreCase("tp") || cmd.getName().equalsIgnoreCase("teleport"))
 			new TPCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("kill"))
 			new KillCommand(sender, args);
@@ -48,6 +49,8 @@ public class CCEssentials extends JavaPlugin {
 			new HealCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("feed"))
 			new FeedCommand(sender, args);
+		else if(cmd.getName().equalsIgnoreCase("tpall"))
+			new TPAllCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("kickall"))
 			new KickallCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("kickallop"))

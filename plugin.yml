@@ -11,6 +11,9 @@ commands:
     tp:
         description: Teleports you to another player, or teleport a player to another.
         usage: /tp <player> | /tp <player1> <player2> | /tp <x> <y> <z> | /tp <player> <x> <y> <z>
+    teleport:
+        description: Teleports you to another player, or teleport a player to another.
+        usage: /teleport <player> | /teleport <player1> <player2> | /teleport <x> <y> <z> | /teleport <player> <x> <y> <z>
     kill:
         description: Kill yourself or a player
         usage: /kill [player]
@@ -50,6 +53,9 @@ commands:
     feed:
         description: Feed a player.
         usage: /feed [player]
+    tpall:
+        description: Teleport all players.
+        usage: /tpallall | /tpall <player> | /tpall <x> <y> <z>
     kickall:
         description: Kick all players (except OPs).
         usage: /kickall <reason>
