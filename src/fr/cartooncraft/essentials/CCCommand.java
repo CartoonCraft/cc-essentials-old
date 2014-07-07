@@ -14,6 +14,10 @@ public class CCCommand {
 		return(sender instanceof Player);
 	}
 	
+	public boolean isPlayer(String p) {
+		return(Bukkit.getPlayer(p) != null);
+	}
+	
 	public Player getPlayer(CommandSender sender) {
 		if(isPlayer(sender)) {
 			return (Player)sender;
