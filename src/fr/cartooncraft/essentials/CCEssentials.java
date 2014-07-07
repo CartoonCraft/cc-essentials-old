@@ -6,6 +6,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.cartooncraft.essentials.commands.BroadcastCommand;
+import fr.cartooncraft.essentials.commands.FeedCommand;
+import fr.cartooncraft.essentials.commands.HealCommand;
 import fr.cartooncraft.essentials.commands.KickCommand;
 import fr.cartooncraft.essentials.commands.KillCommand;
 import fr.cartooncraft.essentials.commands.ListCommand;
@@ -40,6 +42,10 @@ public class CCEssentials extends JavaPlugin {
 			new BroadcastCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("kick"))
 			new KickCommand(sender, args);
+		else if(cmd.getName().equalsIgnoreCase("heal"))
+			new HealCommand(sender, args);
+		else if(cmd.getName().equalsIgnoreCase("feed"))
+			new FeedCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("tell") || cmd.getName().equalsIgnoreCase("msg") || cmd.getName().equalsIgnoreCase("whisp") || cmd.getName().equalsIgnoreCase("t") || cmd.getName().equalsIgnoreCase("w") || cmd.getName().equalsIgnoreCase("pm") || cmd.getName().equalsIgnoreCase("mp"))
 			new TellCommand(sender, args);
 		else {

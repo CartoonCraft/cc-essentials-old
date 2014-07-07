@@ -10,10 +10,7 @@ public class CCCommand {
 	public String senderConsole = ""+ChatColor.RESET+ChatColor.RED+"Sorry, you're a console, you can't do this!";
 	
 	public boolean isPlayer(CommandSender sender) {
-		if(sender instanceof Player)
-			return true;
-		else
-			return false;
+		return(sender instanceof Player);
 	}
 	
 	public Player getPlayer(CommandSender sender) {
