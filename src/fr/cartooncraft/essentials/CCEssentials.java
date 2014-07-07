@@ -9,6 +9,8 @@ import fr.cartooncraft.essentials.commands.BroadcastCommand;
 import fr.cartooncraft.essentials.commands.FeedCommand;
 import fr.cartooncraft.essentials.commands.HealCommand;
 import fr.cartooncraft.essentials.commands.KickCommand;
+import fr.cartooncraft.essentials.commands.KickallCommand;
+import fr.cartooncraft.essentials.commands.KickallOPCommand;
 import fr.cartooncraft.essentials.commands.KillCommand;
 import fr.cartooncraft.essentials.commands.ListCommand;
 import fr.cartooncraft.essentials.commands.SpawnCommand;
@@ -31,7 +33,7 @@ public class CCEssentials extends JavaPlugin {
 		
 		// Commands
 		if(cmd.getName().equalsIgnoreCase("spawn"))
-			new SpawnCommand(sender);
+			new SpawnCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("list"))
 			new ListCommand(sender);
 		else if(cmd.getName().equalsIgnoreCase("tp"))
@@ -46,6 +48,10 @@ public class CCEssentials extends JavaPlugin {
 			new HealCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("feed"))
 			new FeedCommand(sender, args);
+		else if(cmd.getName().equalsIgnoreCase("kickall"))
+			new KickallCommand(sender, args);
+		else if(cmd.getName().equalsIgnoreCase("kickallop"))
+			new KickallOPCommand(sender, args);
 		else if(cmd.getName().equalsIgnoreCase("tell") || cmd.getName().equalsIgnoreCase("msg") || cmd.getName().equalsIgnoreCase("whisp") || cmd.getName().equalsIgnoreCase("t") || cmd.getName().equalsIgnoreCase("w") || cmd.getName().equalsIgnoreCase("pm") || cmd.getName().equalsIgnoreCase("mp"))
 			new TellCommand(sender, args);
 		else {

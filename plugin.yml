@@ -6,8 +6,8 @@ commands:
         description: Return players list.
         usage: /list
     spawn:
-        description: Teleport you to spawn. 
-        usage: /spawn
+        description: Teleport you or somebody to spawn. 
+        usage: /spawn [player]
     tp:
         description: Teleports you to another player, or teleport a player to another.
         usage: /tp <player> | /tp <player1> <player2> | /tp <x> <y> <z> | /tp <player> <x> <y> <z>
@@ -50,3 +50,9 @@ commands:
     feed:
         description: Feed a player.
         usage: /feed [player]
+    kickall:
+        description: Kick all players (except OPs).
+        usage: /kickall <reason>
+    kickallop:
+        description: Kick all players (include OPs, except you).
+        usage: /kickallop <reason>
