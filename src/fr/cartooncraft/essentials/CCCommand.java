@@ -20,6 +20,10 @@ public class CCCommand {
 		return null;
 	}
 	
+	public boolean areSamePlayers(Player p1, Player p2) {
+		return(p1.getName() == p2.getName());
+	}
+	
 	public String getPlayerNotFoundSentence(String name) {
 		return ChatColor.RED+"Can't find "+name+". Is him offline?";
 	}
